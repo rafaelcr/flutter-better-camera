@@ -497,13 +497,13 @@ public class Camera {
     mCaptureCallback.setResult(result);
     Log.e(TAG, "takePicture");
 
-    if (mAutoFocus) {
-      Log.e(TAG, "takePicture-mAutoFocus");
-      lockFocus();
-    } else {
+    //if (mAutoFocus) {
+    //  Log.e(TAG, "takePicture-mAutoFocus");
+    //  lockFocus();
+    //} else {
       Log.e(TAG, "takePicture-noAutoFocus");
       captureStillPicture(filePath,result);
-    }
+    //}
   }
   public void captureStillPicture(String filePath, @NonNull final Result result) {
     final File file = new File(filePath);
